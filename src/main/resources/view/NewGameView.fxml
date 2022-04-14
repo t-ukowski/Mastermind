@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="225.0"
+            prefWidth="400.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presenter.NewGamePresenter"
+            stylesheets="/css/styles.css">
+
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="190.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <HBox alignment="TOP_CENTER" prefHeight="140.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="new_game_box">
+                <VBox prefHeight="140.0" prefWidth="200.0" BorderPane.alignment="CENTER" styleClass="new_game_box_l">
+                    <Label text="Poziom trudności:">
+                        <padding>
+                            <Insets top="10" left="10"/>
+                        </padding>
+                    </Label>
+                    <RadioButton fx:id="easyButton" onMouseClicked="#handleEasyAction" text="Łatwy">
+                        <VBox.margin>
+                            <Insets left="10.0"/>
+                        </VBox.margin>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="group"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="mediumButton" onMouseClicked="#handleMediumAction" text="Średni">
+                        <VBox.margin>
+                            <Insets left="10.0"/>
+                        </VBox.margin>
+                        <toggleGroup>
+                            <fx:reference source="group"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="hardButton" onMouseClicked="#handleHardAction" text="Trudny">
+                        <VBox.margin>
+                            <Insets left="10.0"/>
+                        </VBox.margin>
+                        <toggleGroup>
+                            <fx:reference source="group"/>
+                        </toggleGroup>
+                    </RadioButton>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="140.0" prefWidth="200.0" BorderPane.alignment="CENTER" styleClass="new_game_box_r">
+                    <Label fx:id="description" text="$LABEL_02">
+                        <fx:define>
+                            <String fx:id="LABEL_01" fx:value="Łatwy&#xD;&#xD;Do wyboru 4 kolory.&#xD;Modfikator wyniku: x1,0"/>
+                            <String fx:id="LABEL_02" fx:value="Średni&#xD;&#xD;Do wyboru 5 kolorów.&#xD;Modfikator wyniku: x1,5"/>
+                            <String fx:id="LABEL_03" fx:value="Trudny&#xD;&#xD;Do wyboru 6 kolorów.&#xD;Modfikator wyniku: x2,0"/>
+                        </fx:define>
+                        <padding>
+                            <Insets top="10"/>
+                        </padding>
+                    </Label>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                <Button styleClass="button_ordinary" onMouseClicked="#handleCancelAction">Anuluj
+                    <HBox.margin>
+                        <Insets left="5.0" right="113.0" />
+                    </HBox.margin>
+                </Button>
+                <Button styleClass="button_important" onMouseClicked="#handleNewGameAction">Nowa gra
+                    <HBox.margin>
+                        <Insets left="113.0" right="5.0" />
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="bottom_line">
+
+        </VBox>
+    </bottom>
+</BorderPane>

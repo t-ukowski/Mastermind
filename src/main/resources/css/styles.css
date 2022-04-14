@@ -1,0 +1,157 @@
+.box {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 0 5 10 5;
+    -fx-background-insets: 0 5 10 5;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.game_box {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 5 0 13 10;
+    -fx-background-insets: 5 0 13 10;
+    -fx-background-color: #ffd08f; /* #ffca80;*/
+}
+
+.top_l {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 10 5 5 10;
+    -fx-background-insets: 10 5 5 10;
+}
+.top_r {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 10 10 5 5;
+    -fx-background-insets: 10 10 5 5;
+    -fx-padding: 0 0 0 10;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.code_box {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 3 10 3 10;
+    -fx-background-insets: 3 10 3 10;
+    -fx-background-color: lightgrey;
+}
+
+.colors_box {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 0 35 10 35;
+    -fx-background-insets: 0 35 10 35;
+    -fx-background-color: lightgrey;
+}
+
+.standard_box {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 15 15 15 15;
+    -fx-background-insets: 15 15 15 15;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.standard_top_box {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: 15 15 0 15;
+    -fx-background-insets: 15 15 0 15;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.new_game_box {
+    -fx-border-width: 2;
+    -fx-border-color: transparent;
+    -fx-border-insets: 15 15 15 15;
+    -fx-background-insets: 15 15 15 15;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.new_game_box_r {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: -2 -2 -2 7;
+    -fx-background-insets: -2 -2 -2 7;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.new_game_box_l {
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-insets: -2 6 -2 -2;
+    -fx-background-insets: -2 6 -2 -2;
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+}
+
+.bottom_line {
+    -fx-border-width: 2 0 0 0;
+    -fx-border-color: black;
+}
+
+.game_box_bracket {
+    -fx-border-width: 2;
+    -fx-border-color: #9c7d35;
+    -fx-border-insets: 5 10 5 10;
+    -fx-background-insets: 5 10 5 10;
+    -fx-background-color: #ffbe63;
+}
+
+.big_pin {
+    -fx-fill: grey;
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+    -fx-stroke-type: inside;
+}
+
+.palette_pin {
+    -fx-stroke: black;
+    -fx-stroke-type: inside;
+}
+
+.small_pin {
+    -fx-fill: grey;
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+    -fx-stroke-type: inside;
+}
+
+.button_ordinary {
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+    -fx-background-color: #dcdcdc;
+    -fx-border-color: #707070;
+    -fx-border-width: 2;
+    -fx-border-insets: -2;
+    -fx-border-radius: 4;
+}
+
+.button_ordinary:hover {
+    -fx-background-color: #e2e2e2;
+}
+
+.button_important {
+    -fx-font-size: 15;
+    -fx-font-family: Calibri;
+    -fx-background-color: #f2e461;
+    -fx-border-color: #7a750d;
+    -fx-border-width: 2;
+    -fx-border-insets: -2;
+    -fx-border-radius: 4;
+}
+
+.button_important:hover {
+    -fx-background-color: #fff063;
+}
+
+.error {
+    -fx-text-fill: tomato;
+}

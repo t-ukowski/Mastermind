@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="300.0"
+            prefWidth="400.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presenter.RegisterPresenter"
+            stylesheets="/css/styles.css">
+
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="265.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" prefHeight="215.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="standard_box">
+                <padding>
+                    <Insets top="5" />
+                </padding>
+                <GridPane alignment="CENTER" BorderPane.alignment="CENTER" hgap="10" vgap="10">
+                    <Label text="Nick:">
+
+                    </Label>
+                    <TextField fx:id="nick" GridPane.rowIndex="0" GridPane.columnIndex="1" minWidth="240">
+
+                    </TextField>
+                    <Label text="Email:" GridPane.rowIndex="1">
+
+                    </Label>
+                    <TextField fx:id="email" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </TextField>
+                    <Label text="Hasło:" GridPane.rowIndex="2">
+
+                    </Label>
+                    <PasswordField fx:id="password" GridPane.rowIndex="2" GridPane.columnIndex="1">
+
+                    </PasswordField>
+                    <Label text="Powtórz hasło:" GridPane.rowIndex="3">
+
+                    </Label>
+                    <PasswordField fx:id="rPassword" GridPane.rowIndex="3" GridPane.columnIndex="1">
+
+                    </PasswordField>
+
+                </GridPane>
+                <Label fx:id="error" styleClass="error">
+                    <fx:define>
+                        <String fx:id="ERROR_NOT_MATCHING" fx:value="Hasła nie zgadzają się"/>
+                        <String fx:id="ERROR_USER_EXISTS" fx:value="Użytkownik o tym emailu istnieje"/>
+                        <String fx:id="ERROR_INVALID_CHARACTERS" fx:value="Niektóre pola zawierają niedozwolone znaki"/>
+                        <String fx:id="ERROR_EMPTY_FIELD" fx:value="Nie wszystkie pola są wypełnione"/>
+                        <String fx:id="ERROR_SHORT_PASSWORD" fx:value="Hasło musi mieć co najmniej 8 znaków"/>
+                        <String fx:id="ERROR_INVALID_EMAIL" fx:value="Email nie jest poprawny"/>
+                        <String fx:id="ERROR_NONE" fx:value=""/>
+                    </fx:define>
+                    <padding>
+                        <Insets top="7"/>
+                    </padding>
+                </Label>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                <Button styleClass="button_ordinary" onMouseClicked="#handleCancelAction">Anuluj
+                    <HBox.margin>
+                        <Insets left="5.0" right="98.0" />
+                    </HBox.margin>
+                </Button>
+                <Button styleClass="button_important" onMouseClicked="#handleOkAction">Zarejestruj się
+                    <HBox.margin>
+                        <Insets left="99.0" right="5.0" />
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="bottom_line">
+
+        </VBox>
+    </bottom>
+</BorderPane>

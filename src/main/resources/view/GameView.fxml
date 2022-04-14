@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane prefHeight="800.0"
+            prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.GameOverviewController"
+            stylesheets="/css/styles.css">
+    <top>
+        <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="75.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="top_l">
+                <HBox fx:id="code_box" alignment="CENTER" prefHeight="68.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="code_box">
+                    <Circle radius="26" styleClass="big_pin">
+                        <HBox.margin>
+                            <Insets right="15.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="big_pin">
+                        <HBox.margin>
+                            <Insets left="15.0" right="15.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="big_pin">
+                        <HBox.margin>
+                            <Insets left="15.0" right="15.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="big_pin">
+                        <HBox.margin>
+                            <Insets left="15.0" />
+                        </HBox.margin>
+                    </Circle>
+                </HBox>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="top_r">
+                <HBox>
+                    <Label text="Ruch: ">
+
+                    </Label>
+                    <Label fx:id="move" text="-" minWidth="220">
+
+                    </Label>
+                    <Label text="Punkty: ">
+
+                    </Label>
+                    <Label fx:id="points" text="-" minWidth="50">
+
+                    </Label>
+                </HBox>
+                <Label fx:id="difficulty_label" text="$D_NONE">
+                    <fx:define>
+                        <String fx:id="D_NONE" fx:value="Poziom trudności: -"/>
+                        <String fx:id="D_EASY" fx:value="Poziom trudności: łatwy"/>
+                        <String fx:id="D_MEDIUM" fx:value="Poziom trudności: średni"/>
+                        <String fx:id="D_HARD" fx:value="Poziom trudności: trudny"/>
+                    </fx:define>
+                </Label>
+            </VBox>
+        </HBox>
+    </top>
+	<center>
+        <VBox fx:id="pin_area" alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box">
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="68.0" maxHeight="68.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="game_box_bracket">
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                    </HBox.margin>
+                </Circle>
+                <Circle radius="26" styleClass="big_pin">
+                    <HBox.margin>
+                        <Insets left="15.0" right="42.0" />
+                    </HBox.margin>
+                </Circle>
+                <GridPane BorderPane.alignment="CENTER">
+                    <Circle radius="13" styleClass="small_pin">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.columnIndex="1">
+
+                    </Circle>
+                    <Circle radius="13" styleClass="small_pin" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </Circle>
+                </GridPane>
+            </HBox>
+        </VBox>
+	</center>
+    <right>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="box">
+                <Label fx:id="player_label1" text="$player_LABEL1">
+                    <String fx:id="player_LABEL1" fx:value="Zaloguj się, aby rozpocząć"/>
+                    <String fx:id="player_LABEL2" fx:value="Gracz:"/>
+                </Label>
+                <Label fx:id="player_label2" text="">
+
+                </Label>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="box">
+                <Button fx:id="loginButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLoginAction" text="$login" styleClass="button_ordinary">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                    <fx:define>
+                        <String fx:id="login" fx:value="Zaloguj się"/>
+                        <String fx:id="logout" fx:value="Wyloguj się"/>
+                    </fx:define>
+                </Button>
+                <Button fx:id="registerButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRegisterAction" text="Rejestracja" styleClass="button_ordinary">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin></Button>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="358.0" prefWidth="300.0" BorderPane.alignment="CENTER" styleClass="box">
+                <Button fx:id="newGameButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleNewGameAction" text="Nowa gra" styleClass="button_important" disable="true">
+                    <VBox.margin>
+                        <Insets bottom="33.0" left="5.0" right="5.0" top="33.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="rankingButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRankingAction" text="Ranking graczy" styleClass="button_ordinary" disable="true">
+                    <VBox.margin>
+                        <Insets bottom="33.0" left="5.0" right="5.0" top="33.0" />
+                    </VBox.margin></Button>
+                <Button fx:id="statsButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleStatsAction" text="Statystyki" styleClass="button_ordinary" disable="true">
+                    <VBox.margin>
+                        <Insets bottom="33.0" left="5.0" right="5.0" top="33.0" />
+                    </VBox.margin></Button>
+            </VBox>
+            <VBox fx:id="palette_box" alignment="CENTER" prefHeight="150.0" prefWidth="250.0" BorderPane.alignment="CENTER" styleClass="colors_box">
+                <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                    <Circle radius="26" styleClass="palette_pin">
+                        <HBox.margin>
+                            <Insets right="5.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="palette_pin">
+                        <HBox.margin>
+                            <Insets left="5.0" right="5.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="palette_pin">
+                        <HBox.margin>
+                            <Insets left="5.0" />
+                        </HBox.margin>
+                    </Circle>
+                </HBox>
+                <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                    <Circle radius="26" styleClass="palette_pin">
+                        <HBox.margin>
+                            <Insets right="5.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="palette_pin">
+                        <HBox.margin>
+                            <Insets left="5.0" right="5.0" />
+                        </HBox.margin>
+                    </Circle>
+                    <Circle radius="26" styleClass="palette_pin">
+                        <HBox.margin>
+                            <Insets left="5.0" />
+                        </HBox.margin>
+                    </Circle>
+                </HBox>
+            </VBox>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
+    <bottom>
+        <VBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="800.0" BorderPane.alignment="CENTER" styleClass="bottom_line">
+
+        </VBox>
+    </bottom>
+</BorderPane>

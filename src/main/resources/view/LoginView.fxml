@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="225.0"
+            prefWidth="400.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="presenter.LoginPresenter"
+            stylesheets="/css/styles.css">
+
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="190.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" prefHeight="140.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="standard_box">
+                <padding>
+                    <Insets top="5" />
+                </padding>
+                <GridPane alignment="CENTER" BorderPane.alignment="CENTER" hgap="10" vgap="10">
+                    <Label text="Email:">
+
+                    </Label>
+                    <TextField fx:id="email" GridPane.rowIndex="0" GridPane.columnIndex="1" minWidth="240">
+
+                    </TextField>
+                    <Label text="Hasło:" GridPane.rowIndex="1">
+
+                    </Label>
+                    <PasswordField fx:id="password" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+                    </PasswordField>
+
+                </GridPane>
+                <Label fx:id="error" styleClass="error">
+                    <fx:define>
+                        <String fx:id="ERROR_INVALID_CHARACTERS" fx:value="Niektóre pola zawierają niedozwolone znaki"/>
+                        <String fx:id="ERROR_EMPTY_FIELD" fx:value="Nie wszystkie pola są wypełnione"/>
+                        <String fx:id="ERROR_WRONG_CREDENTIALS" fx:value="Błędny email lub hasło"/>
+                        <String fx:id="ERROR_NONE" fx:value=""/>
+                    </fx:define>
+                    <padding>
+                        <Insets top="7"/>
+                    </padding>
+                </Label>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                <Button styleClass="button_ordinary" onMouseClicked="#handleCancelAction">Anuluj
+                    <HBox.margin>
+                        <Insets left="5.0" right="109.0" />
+                    </HBox.margin>
+                </Button>
+                <Button styleClass="button_important" onMouseClicked="#handleOkAction">Zaloguj się
+                    <HBox.margin>
+                        <Insets left="110.0" right="5.0" />
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="bottom_line">
+
+        </VBox>
+    </bottom>
+</BorderPane>
